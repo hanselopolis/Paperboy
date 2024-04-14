@@ -17,6 +17,9 @@ rem Find and kill the process
 taskkill /f /im %processname%.exe
 
 rem Delete the batch file
+del "%processname%"
+
+rem Delete the batch file
 del "%batchfile%"
 
 
