@@ -5,7 +5,6 @@
 ::del "paperduck_script.exe"
 ::del "cleaner.bat"
 
-@echo off
 setlocal
 
 rem Get the name of the batch file
