@@ -1,5 +1,7 @@
 This is the repository for my final project for COMP7327 at University of Memphis - Dr Andrew Neel, professor. 
 
+NOTE: paperduck branch contains the .txt file that was the ducky script that was converted to python that was then converted to an .exe. Never could get the .bat file to properly delete the exe that spawned it. 
+
 The idea here was to make our own malware. For mine, I started with the idea of using a HID emulation like DuckyScript to perform a keystroke injection attack. I quickly found that the implementation was a bit clunky and slow - ie, it was extremely apparent what was going on with the attack. To this end, I pivoted a bit to a combination of Powershell and batch script files disguised as a PDF download that would then download the payload files to the victim computer upon opening. 
 
 This was at least mildly accomplished, though I imagine that the file will be caught by most malware detection services. 
